@@ -2,9 +2,22 @@ import React from 'react'
 import './Detail.scss';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
-
+import ImgDetail from '../../../components/imgList/ImgDetail';
+import { useState, useEffect } from 'react';
 
 const Detail = () => {
+    const [imgData, setImgData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/data/imgDetailData.json', {
+        method: 'GET' 
+        })              
+        .then(res => res.json())
+        .then(data => {
+            setImgData(data);
+        });
+    }, [])
+
     return (
     <div className = 'Detail'> 
         <div className='container'>
@@ -36,9 +49,9 @@ const Detail = () => {
                 </div>
             </div>
             <section>
-                <div className='coffee-image'>
-                    <img src='imgs/HeeYun/coffee.jpg' alt='커피 1'/>
-                </div>
+                {imgData.map(el => 
+                    <ImgDetail coffeeImg={el.img} coffeeName = {el.title}/>
+                )}
                 <article>
                     <div className='coffee-title'>
                         <h4 className='small-title'>
