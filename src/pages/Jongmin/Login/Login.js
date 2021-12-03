@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.scss";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -7,6 +7,17 @@ function Login() {
 
   const goToList = () => {
     navigate("/list-jongmin");
+  };
+
+  const [emailInputState, setEmailInputState] = useState("");
+  const [passwordInputState, setPasswordInputState] = useState("");
+
+  const handleIdInput = (e) => {
+    setEmailInputState(e.target.value);
+  };
+
+  const handlePwInput = (e) => {
+    setPasswordInputState(e.target.value);
   };
 
   return (
@@ -19,8 +30,16 @@ function Login() {
               type="text"
               id="emailInput"
               placeholder="전화번호, 사용자 이름 또는 이메일"
+              onChange={handleIdInput}
+              value={emailInputState}
             />
-            <input type="password" id="passwordInput" placeholder="비밀번호" />
+            <input
+              type="password"
+              id="passwordInput"
+              placeholder="비밀번호"
+              onChange={handlePwInput}
+              value={passwordInputState}
+            />
             <button id="login-button" type="submit" onClick={goToList}>
               로그인
             </button>
