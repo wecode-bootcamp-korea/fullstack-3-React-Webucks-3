@@ -42,7 +42,7 @@ function Login() {
   const goToList = () => {
     if(condition) {
       sessionStorage.setItem("id", id);
-      navigate("/List");
+      navigate("/list-haneul");
     }
     else {
       alert('아이디나 비밀번호를 확인해주세요.');
@@ -64,7 +64,7 @@ function Login() {
         <div>
           <button type="button" className="login-button" onClick={goToList} style={{ backgroundColor: condition ? "#0096f6" : "#C0DFFD" }}
           >
-            로그인
+          로그인
           </button>
         </div>
       </form>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router';
-import './List.scss';
+import '../List/List.scss';
 
 
 function CoffeeCard(props) {
 
     const navigate = useNavigate();
         const goToDetail = () => {
-        navigate("/Detail");
+        navigate("/detail-haneul");
     }
 
     const [heart, setHeart] = useState(false);
