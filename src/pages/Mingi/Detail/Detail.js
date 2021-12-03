@@ -36,11 +36,20 @@ function DetailMingi() {
 	const [reviewsList, setList] = useState([]);
 
 	const enter = (e) => {
-		if (e.key === "Enter") {
+		if (e.key === "Enter" && id && review) {
 			setList(reviewsList.concat({ id: id, review: review }));
 			setId("");
 			setReview("");
 		}
+	};
+
+	const deleteReview = (e) => {
+		const num = Number(e.target.id);
+		setList(
+			reviewsList.filter((e) => {
+				return reviewsList.indexOf(e) != num;
+			})
+		);
 	};
 
 	return (
@@ -121,11 +130,18 @@ function DetailMingi() {
 							<section className="reviewBox">
 								<h3>리뷰</h3>
 								<section id="reviews">
-									{reviewsList.map((el) => {
+									{reviewsList.map((el, index) => {
 										return (
-											<li>
+											<li key={index}>
 												<span className="idOutput">{el.id}</span>
 												<span className="reviewOutput">{el.review}</span>
+												<button
+													className="delete"
+													id={index}
+													onClick={deleteReview}
+												>
+													삭제
+												</button>
 											</li>
 										);
 									})}

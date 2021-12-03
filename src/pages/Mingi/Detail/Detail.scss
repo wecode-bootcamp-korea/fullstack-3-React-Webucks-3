@@ -154,7 +154,9 @@
 		padding: 15px;
 	}
 	li {
+		position: relative;
 		list-style: none;
+		margin: 2px 0;
 	}
 
 	.idOutput {
@@ -165,6 +167,12 @@
 	.reviewOutput {
 		margin-left: 10px;
 		font-size: 14px;
+	}
+
+	.delete {
+		position: absolute;
+		right: 0px;
+		font-size: 12px;
 	}
 
 	.idInput {
