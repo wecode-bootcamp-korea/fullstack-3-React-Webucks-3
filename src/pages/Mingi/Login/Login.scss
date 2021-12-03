@@ -29,19 +29,31 @@
 		}
 
 		.formBox {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			margin: 20px 0 0;
 		}
 		.innerBox {
-			border: 2px solid hsl(0deg 0% 87%);
+			//border-color: #dedede;
+			border: 2px solid;
 			border-radius: 5px;
 			background-color: hsl(0deg 0% 97%);
 			width: 300px;
 			height: 40px;
 			margin: 10px 0;
 			padding: 0 10px;
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.typeChangeBtn {
+			position: absolute;
+			top: 82px;
+			right: 10px;
+			font-size: 11px;
 		}
 
 		.buttonBox {

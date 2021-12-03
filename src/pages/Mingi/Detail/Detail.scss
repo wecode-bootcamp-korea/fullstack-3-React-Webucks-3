@@ -172,7 +172,10 @@
 	.delete {
 		position: absolute;
 		right: 0px;
-		font-size: 12px;
+		padding: 0 2px;
+		border-radius: 2px;
+		background-color: antiquewhite;
+		font-size: 11px;
 	}
 
 	.idInput {
