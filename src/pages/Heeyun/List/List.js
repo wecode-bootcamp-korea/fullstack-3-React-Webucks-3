@@ -3,7 +3,7 @@ import './List.scss';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import ImgList from '../../../components/imgList/ImgList'
-import TopNav from '/Users/heeyun/Desktop/wecode/webucks-project/src/components/Nav/TopNav';
+import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
 
 
 const List = () => {

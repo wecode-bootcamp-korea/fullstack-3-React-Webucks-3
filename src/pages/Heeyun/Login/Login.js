@@ -3,11 +3,7 @@ import style from './Login.scss';
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    // const navigate = useNavigate();
-
-    // const goToMain = () => {
-    //     navigate("/list");
-    // };
+    
     return (
         <div className='Login' >
             <div className='container'>

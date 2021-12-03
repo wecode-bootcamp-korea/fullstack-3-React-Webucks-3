@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login/Login'
-import List from './pages/List/List'
-import Detail from './pages/Detail/Detail'
+import Login from './pages/Heeyun/Login/Login'
+import List from './pages/Heeyun/List/List'
+import Detail from './pages/Heeyun/Detail/Detail'
 
 function Router(){
     return(

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Detail.scss';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import TopNav from '/Users/heeyun/Desktop/wecode/webucks-project/src/components/Nav/TopNav';
+import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
 
 
 const Detail = () => {
