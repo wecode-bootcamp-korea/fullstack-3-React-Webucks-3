@@ -1,0 +1,62 @@
+.Login{
+    margin: 0px;
+    box-sizing: content-box;
+
+    .container{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        background-color:#EEEFEF;
+        
+        section{
+        display: flex;
+        width: 420px;
+        height: 600px;
+        align-items: center;
+        flex-direction: column;
+        border:3px solid #DFDFDF;
+        margin-top:40px;
+        background-color: white;
+            
+            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+            h1{
+                font-size: 70px;
+                font-family: 'Dancing Script', cursive;
+                text-align: center;
+                font-weight: bold;
+            }
+            form{
+                .boxes{
+                    width: 310px;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    padding: 5px 10px;
+                    border: 1px solid #DFDFDF;
+                }
+                input >{
+                    background-color: #F7F7F7;
+                    border-radius: 3px;
+
+                    ::placeholder { 
+                        color: #AEAEAE;
+                        opacity: 0.5;
+                    }
+                }
+                button{
+                    display: inline;
+                    background-color: #ADD3EA;
+                    color: white;
+                    border-radius: 7px;
+                    text-align: center;
+                }
+            }
+            .footer{
+            padding-top:100px ;
+            text-align: center;
+            color: #87A9BF;
+            }
+        }
+        
+    }
+    
+}
