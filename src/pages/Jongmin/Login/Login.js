@@ -11,7 +11,6 @@ function Login() {
 
   const [emailInputState, setEmailInputState] = useState("");
   const [passwordInputState, setPasswordInputState] = useState("");
-  const [buttonColor, setButtonColor] = useState("#add3eb");
 
   const handleIdInput = (e) => {
     setEmailInputState(e.target.value);

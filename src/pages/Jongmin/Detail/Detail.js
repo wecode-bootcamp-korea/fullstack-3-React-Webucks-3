@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import TopNav from "../Component/TopNav";
 import "./Detail.scss";
 
 function Detail() {
+  const [onHeart, setOnHeart] = useState("🤍");
+
+  const heartSelection = () => {
+    if (onHeart === "❤️") {
+      return "🤍";
+    } else if (onHeart === "🤍") {
+      return "❤️";
+    }
+  };
+
   return (
     <>
       <div className="Detail">
@@ -45,7 +55,9 @@ function Detail() {
                 <p id="textKor">화이트 초콜릿 모카</p>
                 <p id="textEng">White Chocolate Mocha</p>
               </div>
-              <p id="heart">🤍</p>
+              <p id="heart" onClick={() => setOnHeart(heartSelection)}>
+                {onHeart}
+              </p>
             </div>
             <div id="descripttion">
               <p>
