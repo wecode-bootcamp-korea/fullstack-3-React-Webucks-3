@@ -157,6 +157,9 @@
 		position: relative;
 		list-style: none;
 		margin: 2px 0;
+		border-bottom: 1px solid;
+		border-image: linear-gradient(to right, white, grey);
+		border-image-slice: 1;
 	}
 
 	.idOutput {
@@ -194,9 +197,19 @@
 		border-style: none;
 	}
 
-	#reviews p {
+	.like {
+		position: absolute;
+		top: -2px;
+		right: 70px;
 		font-size: 15px;
-		padding: 4px;
+	}
+
+	.hate {
+		position: absolute;
+		top: -2px;
+		right: 40px;
+		font-size: 15px;
+		transform: rotate(180deg);
 	}
 
 	footer {

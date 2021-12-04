@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Detail.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import Topnav from "../Topnav/Topnav";
 import HeartBtn from "../Heart/Heart";
 function DetailMingi() {
@@ -51,6 +53,38 @@ function DetailMingi() {
 			})
 		);
 	};
+
+	const [likeColor, setLikeColor] = useState("black");
+
+	const [likeOpacity, setLikeOpacity] = useState("0.3");
+
+	const [hateColor, setHateColor] = useState("black");
+
+	const [hateOpacity, setHateOpacity] = useState("0.3");
+
+	function likeChange(e) {
+		if (likeColor === "black") {
+			e.preventDefault();
+			setLikeColor("blue");
+			setLikeOpacity("0.6");
+		} else {
+			e.preventDefault();
+			setLikeColor("black");
+			setLikeOpacity("0.3");
+		}
+	}
+
+	function hateChange(e) {
+		if (hateColor === "black") {
+			e.preventDefault();
+			setHateColor("red");
+			setHateOpacity("0.6");
+		} else {
+			e.preventDefault();
+			setHateColor("black");
+			setHateOpacity("0.3");
+		}
+	}
 
 	return (
 		<>
@@ -142,6 +176,20 @@ function DetailMingi() {
 												>
 													삭제
 												</button>
+												<div
+													onClick={likeChange}
+													className="like"
+													style={{ color: likeColor, opacity: likeOpacity }}
+												>
+													<FontAwesomeIcon icon={faThumbsUp} />
+												</div>
+												<div
+													onClick={hateChange}
+													className="hate"
+													style={{ color: hateColor, opacity: hateOpacity }}
+												>
+													<FontAwesomeIcon icon={faThumbsUp} />
+												</div>
 											</li>
 										);
 									})}
