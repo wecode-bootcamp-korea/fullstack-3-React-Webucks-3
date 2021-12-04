@@ -11,6 +11,7 @@ function Login() {
 
   const [emailInputState, setEmailInputState] = useState("");
   const [passwordInputState, setPasswordInputState] = useState("");
+  const [buttonColor, setButtonColor] = useState("#add3eb");
 
   const handleIdInput = (e) => {
     setEmailInputState(e.target.value);
@@ -19,6 +20,9 @@ function Login() {
   const handlePwInput = (e) => {
     setPasswordInputState(e.target.value);
   };
+
+  const validation =
+    emailInputState.includes("@") && passwordInputState.length >= 5;
 
   return (
     <>
@@ -40,7 +44,14 @@ function Login() {
               onChange={handlePwInput}
               value={passwordInputState}
             />
-            <button id="login-button" type="submit" onClick={goToList}>
+            <button
+              id="login-button"
+              type="submit"
+              onClick={goToList}
+              style={{
+                backgroundColor: validation ? "#60ADED" : "#add3eb",
+              }}
+            >
               로그인
             </button>
             {/* <Link to="/list" id="login-button">
