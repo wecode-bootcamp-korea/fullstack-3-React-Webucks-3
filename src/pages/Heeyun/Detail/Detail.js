@@ -18,6 +18,38 @@ const Detail = () => {
         });
     }, [])
 
+    const [heartColor, setHeartColor] = useState('black')
+    function clickHeart(){
+        if(heartColor==='red'){
+            return setHeartColor('black')
+        }
+        if(heartColor==='black'){return setHeartColor('red')}
+    }
+
+    // function addComments(event){
+    //     console.log(event)
+    //     return (<li>{event}</li>)
+    // }
+    const [comment, setComment] = useState('');
+    let reviewArr = [comment];
+    const getComments = (e) => {
+        if(e.key === 'Enter'){
+            reviewArr.push(e.target.value);
+            console.log('event ');
+            console.log(reviewArr);
+            setComment(reviewArr);
+            e.target.value = null;
+        }
+    }
+    const Comment = (props) => {
+        return (
+        <div>
+            <li>
+                {props.comment}
+            </li>
+        </div>
+        );
+    }
     return (
     <div className = 'Detail'> 
         <div className='container'>
@@ -60,7 +92,7 @@ const Detail = () => {
                             <span className='small-title-English'>
                                 Coffee 1</span>
                         </h4>
-                        <span className="material-icons" id='heart'>
+                        <span className="material-icons" id='heart' onClick={clickHeart} style={{color : heartColor}}>
                             favorite_border
                         </span>
                     </div>
@@ -124,13 +156,22 @@ const Detail = () => {
                                     <a href='https://www.naver.com/'>webucks_killer</a>
                                     <span>오함마 들고 찾아갑니다.</span>
                                 </li>
+                                {reviewArr.map((e,i) => {
+                                    return (<div>
+                                    <Comment
+                                        index = {i}
+                                        comment = {e}
+                                    />
+                                    </div>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>
                     <div className='review-input'>
                         <span id='idSpace'></span>
                         <span>
-                            <input type="text" placeholder="리뷰를 입력해주세요" />
+                            <input type="text" placeholder="리뷰를 입력해주세요" onKeyPress={(e) => getComments(e)}/>
                         </span>
                     </div>
                 </article>
