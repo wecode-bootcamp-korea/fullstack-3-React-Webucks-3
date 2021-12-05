@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import TopNav from "../Component/TopNav";
 import "./Detail.scss";
+import Review from "../Component/Review";
 
 function Detail() {
+  // 좋아요(하트) 클릭 기능 구현
   const [onHeart, setOnHeart] = useState("🤍");
 
   const heartSelection = () => {
@@ -99,33 +101,7 @@ function Detail() {
                 <div id="ingredientsAllergie">알레르기 유발 요인 : 우유</div>
               </div>
             </div>
-            <div id="reviewContainer">
-              <div id="reviewTitle">리뷰</div>
-              <div id="reviewDetail">
-                <div className="reviewDetailPart">
-                  <div className="reviewID">coff_lover</div>
-                  <div className="reviewComment">너무 맛있어요!</div>
-                </div>
-                <div className="reviewDetailPart">
-                  <div className="reviewID">CHOCO7</div>
-                  <div className="reviewComment">
-                    오늘도 화이트 초콜릿 모카를 마시러 갑니다.
-                  </div>
-                </div>
-                <div className="reviewDetailPart">
-                  <div className="reviewID">legend_dev</div>
-                  <div className="reviewComment">
-                    진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿
-                    모카는 전설이다. 진짜 화이트 초...
-                  </div>
-                </div>
-              </div>
-              <input
-                id="reviewMessage"
-                type="text"
-                placeholder="리뷰를 입력해주세요."
-              />
-            </div>
+            <Review />
           </section>
         </section>
         <footer>
