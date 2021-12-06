@@ -32,7 +32,7 @@ const List = () => {
                 </div>
                 <div className='photo'>
                     <ul className='photoList'>
-                        {imgData[0].map((el)=>{
+                        {imgData[0]&&imgData[0].map((el)=>{
                             return (
                             < ImgList coffeeImg={el.img} coffeeName = {el.title}/>
                             );
@@ -48,41 +48,11 @@ const List = () => {
                 </div>
                 <div className='photo'>
                     <ul className='photoList'>
-                    {imgData[1].map((el)=>{
+                    {imgData[1] && imgData[1].map((el)=>{
                             return (
                             < ImgList coffeeImg={el.img} coffeeName = {el.title}/>
                             );
                     })}
-                        {/* <div className='photoBox'>
-                            <li>
-                                <img src='imgs/HeeYun/blackCoffee.jpg' alt='블랙커피' />
-                            </li>
-                            <p>Black Coffee</p>
-                        </div>
-                        <div className="photoBox">
-                            <li>
-                                <img src='imgs/HeeYun/coffee11.jpg' alt='커피11' />
-                            </li> 
-                            <p>커피 11</p>
-                        </div>
-                        <div className="photoBox">
-                            <li>
-                                <img src='imgs/HeeYun/coffee12.jpg' alt='커피12' />
-                            </li> 
-                            <p>커피 12</p>
-                        </div>
-                        <div className='photoBox'>
-                            <li>
-                                <img src='imgs/HeeYun/coffee13.jpg' alt='커피13' />
-                            </li>
-                            <p>커피 13</p>
-                        </div>
-                        <div className='photoBox'>
-                            <li>
-                                <img src='imgs/HeeYun/coffee14.jpg' alt='커피14' />
-                            </li>
-                            <p>커피 14</p>
-                        </div> */}
                     </ul>
                 </div>
             </section>
