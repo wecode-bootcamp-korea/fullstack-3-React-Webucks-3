@@ -1,5 +1,5 @@
 [
-
+  [
     {
       "img" : "imgs/HeeYun/coffee.jpg",
       "title" : "커피 1" 
@@ -39,9 +39,9 @@
     {
       "img" : "imgs/HeeYun/coffee10.jpg",
       "title" : "커피 10" 
-    },
-
-  
+    }
+  ],
+  [
     {
       "img" : "imgs/HeeYun/blackCoffee.jpg",
       "title" : "Black Coffee" 
@@ -62,5 +62,5 @@
       "img" : "imgs/HeeYun/coffee14.jpg",
       "title" : "커피 14" 
     }
-  
+  ]
 ]

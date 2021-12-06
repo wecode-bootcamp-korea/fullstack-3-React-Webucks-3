@@ -31,13 +31,13 @@ const Detail = () => {
     
     const getComment = (event) => {
         if(event.key === 'Enter'){
-            setComment(comment.concat(event.target.value))
-            console.log(comment);
+            console.log(typeof event.target.value)
+            setComment(comment.concat(event.target.value));
+            console.log('comment',typeof comment)
             event.target.value = null; 
         }
     }
     const Comment = (props) => {
-        console.log('ok')
         return (
             <li>
                 {props.comment}
@@ -150,9 +150,9 @@ const Detail = () => {
                                     <a href='https://www.naver.com/'>webucks_killer</a>
                                     <span>오함마 들고 찾아갑니다.</span>
                                 </li>
-                                {comment.map((event) => {
+                                {comment.map((el) => {
                                     return (
-                                    <Comment comment = {event}/>
+                                    <Comment comment = {el}/>
                                     );
                                 })}
                             </ul>
