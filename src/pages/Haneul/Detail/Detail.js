@@ -51,7 +51,7 @@ function Deatil() {
                 <h2>화이트 초콜릿 모카</h2>
                 <small>White Chocolate Moca</small>
                 <i
-                  className={heartClick ? 'fas fa-heart' : 'far fa-heart'}
+                  className={heartClick ? 'fas fa-heart heart' : 'far fa-heart'}
                   id="detail-page__content-heart"
                   onClick={() => setHeartClick(!heartClick)}
                 ></i>

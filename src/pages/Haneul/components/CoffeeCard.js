@@ -26,7 +26,7 @@ function CoffeeCard(props) {
                 <p className="coffee-list__name">
                 {props.item.name} &nbsp;
                 <i
-                className={heart === true ? 'fas fa-heart' : 'far fa-heart'}
+                className={heart === true ? 'fas fa-heart heart' : 'far fa-heart'}
                 onClick={() => setHeart(!heart)}
                 ></i>
                 </p>

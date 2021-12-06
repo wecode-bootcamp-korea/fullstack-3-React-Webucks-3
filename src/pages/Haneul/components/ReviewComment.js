@@ -12,7 +12,7 @@ function ReviewComment(props) {
                 <span>{props.user ? props.user : (sessionStorage.getItem("id"))}</span>: {props.text}
             </div>
             <i
-                className={heart === true ? 'fas fa-heart' : 'far fa-heart'}
+                className={heart === true ? 'fas fa-heart heart' : 'far fa-heart'}
                 onClick={() => setHeart(!heart)}
             ></i>
             <i

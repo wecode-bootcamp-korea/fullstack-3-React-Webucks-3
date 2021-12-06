@@ -95,6 +95,10 @@ a {
   border-bottom: 2px solid black;
 }
 
+.detail-page__content-title .heart {
+  color: rgb(243, 42, 76);
+}
+
 #detail-page__content-heart {
   position: absolute;
   right: 10px;
@@ -182,6 +186,10 @@ a {
 .nutrition-info__review-comment__inner .fa-heart:hover,
 .nutrition-info__review-comment__inner .fa-trash:hover {
   cursor: pointer;
+}
+
+.nutrition-info__review-comment__inner .heart {
+  color: rgb(243, 42, 76);
 }
 
 #input-review {
