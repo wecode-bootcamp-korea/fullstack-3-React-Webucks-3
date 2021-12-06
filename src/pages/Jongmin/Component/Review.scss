@@ -1,0 +1,47 @@
+#reviewContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+
+  #reviewTitle {
+    padding: 0 0 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 1px solid #bfbfbf;
+  }
+
+  #reviewDetail {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .reviewDetailPart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .reviewCommentWithDel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .reviewID {
+    font-weight: 700;
+    margin: 0 10px 0 0;
+    vertical-align: center;
+  }
+  // #reviewDel {
+  //   all: unset;
+  // }
+
+  #reviewMessage {
+    padding: 10px 15px;
+    background-color: #efefef;
+    border-radius: 5px;
+  }
+}

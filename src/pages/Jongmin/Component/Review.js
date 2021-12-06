@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Detail/Detail.scss";
+import "./Review.scss";
 
 function Review() {
   // 리뷰 댓글 기능 구현
@@ -28,8 +28,18 @@ function Review() {
       let reviewIDDiv = document.createElement("div");
       reviewDetailPartDiv.appendChild(reviewIDDiv);
 
+      // 리뷰 삭제 버튼과 리뷰를 묶는 div 생성
+      let reviewCommentWithDel = document.createElement("div");
+      reviewDetailPartDiv.appendChild(reviewCommentWithDel);
+      // 리뷰 삭제 버튼과 리뷰를 묶는 div 생성 - 끝
+
       let reviewCommentDiv = document.createElement("div");
-      reviewDetailPartDiv.appendChild(reviewCommentDiv);
+      reviewCommentWithDel.appendChild(reviewCommentDiv);
+
+      // 리뷰 삭제 버튼 생성
+      let reviewDel = document.createElement("button");
+      reviewCommentWithDel.appendChild(reviewDel);
+      // 리뷰 삭제 버튼 생성 - 끝
 
       // class 생성
       let reviewDetailPartClass = document.createAttribute("class");
@@ -40,12 +50,23 @@ function Review() {
       reviewIDClass.value = "reviewID";
       reviewIDDiv.setAttributeNode(reviewIDClass);
 
+      let reviewCommentWithDelClass = document.createAttribute("class");
+      reviewCommentWithDelClass.value = "reviewCommentWithDel";
+      reviewCommentWithDel.setAttributeNode(reviewCommentWithDelClass);
+
       let reviewCommentClass = document.createAttribute("class");
       reviewCommentClass.value = "reviewComment";
       reviewCommentDiv.setAttributeNode(reviewCommentClass);
 
+      // 리뷰 삭제 버튼 id 생성
+      let reviewDelClass = document.createAttribute("id");
+      reviewDelClass.value = "reviewDel";
+      reviewDel.setAttributeNode(reviewDelClass);
+      // 리뷰 삭제 버튼 ID 생성 - 끝
+
       reviewIDDiv.innerText = idFront;
       reviewCommentDiv.innerText = reviewComment;
+      reviewDel.innerText = "DEL";
     }
   };
 
