@@ -28,12 +28,13 @@
 
   .coffeeTitle {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 175px;
+    width: 200px;
   }
 
   #heart {
+    padding-left: 10px;
     cursor: pointer;
   }
 }
