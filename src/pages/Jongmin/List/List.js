@@ -88,7 +88,13 @@ function List() {
           </div>
           <div className="coffeeImgsSection">
             {coffeeList1.map((data) => {
-              return <CoffeeCard name={data.name} image={data.image} />;
+              return (
+                <CoffeeCard
+                  name={data.name}
+                  image={data.image}
+                  heartEmoticon={data.heartEmoticon}
+                />
+              );
             })}
           </div>
         </section>
@@ -101,7 +107,13 @@ function List() {
           </div>
           <div className="coffeeImgsSection">
             {coffeeList2.map((data) => {
-              return <CoffeeCard name={data.name} image={data.image} />;
+              return (
+                <CoffeeCard
+                  name={data.name}
+                  image={data.image}
+                  heartEmoticon={data.heartEmoticon}
+                />
+              );
             })}
           </div>
         </section>
