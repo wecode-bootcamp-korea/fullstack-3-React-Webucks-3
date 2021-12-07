@@ -33,6 +33,7 @@ function ListMingi() {
 							coffeeList.coldBrew.map((coffee, index) => {
 								return (
 									<CoffeeCard
+										key={index}
 										image={coffee.image}
 										explain={coffee.explain}
 										id={coffee.id}
@@ -49,9 +50,14 @@ function ListMingi() {
 					</section>
 					<section className="menuList">
 						{coffeeList.coldBrew &&
-							coffeeList.brewed.map((coffee) => {
+							coffeeList.brewed.map((coffee, index) => {
 								return (
-									<CoffeeCard image={coffee.image} explain={coffee.explain} />
+									<CoffeeCard
+										key={index}
+										image={coffee.image}
+										explain={coffee.explain}
+										id={coffee.id}
+									/>
 								);
 							})}
 					</section>

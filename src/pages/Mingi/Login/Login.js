@@ -70,7 +70,7 @@ function LoginMingi() {
 	};
 	return (
 		<div className="login">
-			<body>
+			<div className="body">
 				<section className="loginBox">
 					<h1>WeBucks</h1>
 					<form className="formBox">
@@ -116,7 +116,7 @@ function LoginMingi() {
 					</section>
 				</section>
 				<script src="js/login.js"></script>
-			</body>
+			</div>
 		</div>
 	);
 }

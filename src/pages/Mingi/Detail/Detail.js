@@ -7,26 +7,6 @@ import HeartBtn from "../Heart/Heart";
 import LikeBtn from "./LikeBtn";
 
 function DetailMingi() {
-	// const [blankColor, setColor] = useState("black");
-
-	// const [blankOpacity, setBlankOpacity] = useState("0.4");
-
-	// const [solidOpacity, setSolidOpacity] = useState("0");
-
-	// function heartChange(e) {
-	// 	if (blankColor === "black") {
-	// 		e.preventDefault();
-	// 		setColor("red");
-	// 		setBlankOpacity("1");
-	// 		setSolidOpacity("0.4");
-	// 	} else {
-	// 		e.preventDefault();
-	// 		setColor("black");
-	// 		setBlankOpacity("0.4");
-	// 		setSolidOpacity("0");
-	// 	}
-	// }
-
 	const [id, setId] = useState("");
 	const handleIdInput = (e) => {
 		setId(e.target.value);

@@ -15,10 +15,10 @@ function CoffeeCard(props) {
 				<div className="imgBox" onClick={goToDetail}>
 					<img src={props.image} alt={props.explain} height="200px" />
 				</div>
-				<p className="text">
+				<div className="text">
 					<span onClick={goToDetail}>{props.explain}</span>
 					<HeartBtn />
-				</p>
+				</div>
 			</li>
 		</div>
 	);

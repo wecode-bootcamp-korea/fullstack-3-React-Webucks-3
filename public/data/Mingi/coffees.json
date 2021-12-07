@@ -56,10 +56,12 @@
   "brewed":
   [
     {
+      "id" : 1,
       "image": "/images/mingi/아메리카노.jpg",
       "explain": "아메리카노"
     },
     {
+      "id" : 2,
       "image": "/images/mingi/카페 라떼.jpg",
       "explain": "카페 라떼"
     }
