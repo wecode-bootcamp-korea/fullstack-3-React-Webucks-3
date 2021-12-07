@@ -44,7 +44,7 @@ function Deatil() {
           </div>
           <div className="detail-page">
             <div className="detail-page__img">
-              <img src="/images/Haneul/coffee.jpg" alt="커피 사진" width="400px" />
+              <img alt="커피 사진" src="/images/Haneul/coffee.jpg" width="400px" />
             </div>
             <div className="detail-page__content">
               <div className="detail-page__content-title">

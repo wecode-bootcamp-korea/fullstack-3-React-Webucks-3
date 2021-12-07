@@ -17,7 +17,8 @@ function CoffeeCard(props) {
             <li>
                 <div className="coffee-list__box">
                     <img
-                        src={props.item.img} alt="커피"
+                        alt="커피"
+                        src={props.item.img}
                         width="200px"
                         height="200px"
                         onClick={goToDetail}
