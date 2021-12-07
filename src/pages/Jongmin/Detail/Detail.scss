@@ -18,33 +18,35 @@
     border-radius: 5px;
   }
 
-  #logo {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    height: 50px;
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-    font-weight: 700;
-  }
+  // #logo {
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 0 20px;
+  //   height: 50px;
+  //   font-family: "Dancing Script", cursive;
+  //   font-size: 20px;
+  //   font-weight: 700;
+  // }
 
-  #menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // flex-wrap: wrap;
-    padding: 0 20px;
-    width: 35%;
-    color: #bfbfbf;
-  }
+  // #menu {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   // flex-wrap: wrap;
+  //   padding: 0 20px;
+  //   width: 35%;
+  //   color: #bfbfbf;
+  // }
 
-  #logoGoHome {
-    cursor: pointer;
-  }
+  // #logoGoHome {
+  //   cursor: pointer;
+  // }
 
-  .menuClass {
-    cursor: pointer;
-  }
+  // .menuClass {
+  //   cursor: pointer;
+  //   padding: 0 5px;
+  //   font-size: 13px;
+  // }
 
   #mainHeader {
     display: flex;
@@ -68,11 +70,6 @@
     height: 70px;
     padding-right: 20px;
     color: #bfbfbf;
-  }
-
-  .menuClass {
-    padding: 0 5px;
-    font-size: 13px;
   }
 
   #Information {
