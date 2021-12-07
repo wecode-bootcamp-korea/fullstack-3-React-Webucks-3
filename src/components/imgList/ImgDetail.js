@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ImgDetail = (props) =>{
+const ImgDetail = ({coffeeImg, coffeeName}) =>{
     return(
         <div className='coffee-image'>
-            <img src={props.coffeeImg} alt={props.coffeeName}/>
+            <img src={coffeeImg} alt={coffeeName}/>
         </div>
         );
 }

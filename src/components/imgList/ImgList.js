@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-const ImgList = (props) =>{
+const ImgList = ({coffeeImg, coffeeName}) =>{
     return(
         <div className="photoBox">
             < Link to = '/detail'>
                 <li>
-                    <img src={props.coffeeImg} alt={props.coffeeName} />
+                    <img src={coffeeImg} alt={coffeeName} />
                 </li> 
-                <p>{props.coffeeName}</p>
+                <p>{coffeeName}</p>
             </Link>
         </div> );
 }
