@@ -32,7 +32,7 @@ const List = () => {
                 <div className='photo'>
                     <ul className='photoList'>
                     {imgData[0] && imgData[0].map(
-                            (el)=>{
+                        (el)=>{
                                 return (
                                 < ImgList coffeeImg={el.img} coffeeName = {el.title}/>
                                 );

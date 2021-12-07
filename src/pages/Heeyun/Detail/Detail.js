@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './Detail.scss';
-import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
+import TopNav from '../../../components/Nav/TopNav';
+import Footer from '../../../components/Footer/Footer'
 import ImgDetail from '../../../components/imgList/ImgDetail';
-import { useState, useEffect } from 'react';
 
 const Detail = () => {
 
@@ -10,7 +10,7 @@ const Detail = () => {
 
     useEffect(() => {
         fetch('http://localhost:3000/data/imgDetailData.json', {
-        method: 'GET' 
+            method: 'GET' 
         })              
         .then(res => res.json())
         .then(data => {
@@ -23,7 +23,9 @@ const Detail = () => {
         if(heartColor==='red'){
             return setHeartColor('black')
         }
-        if(heartColor==='black'){return setHeartColor('red')}
+        else{
+            return setHeartColor('red')
+        }
     }
 
     
@@ -31,9 +33,7 @@ const Detail = () => {
     
     const getComment = (event) => {
         if(event.key === 'Enter'){
-            console.log(typeof event.target.value)
             setComment(comment.concat(event.target.value));
-            console.log('comment',typeof comment)
             event.target.value = null; 
         }
     }
@@ -78,7 +78,10 @@ const Detail = () => {
             </div>
             <section>
                 {imgData.map(el => 
-                    <ImgDetail coffeeImg={el.img} coffeeName = {el.title}/>
+                    <ImgDetail 
+                        coffeeImg={el.img} 
+                        coffeeName = {el.title}
+                    />
                     )
                 }
                 <article>
@@ -175,58 +178,10 @@ const Detail = () => {
                     </div>
                 </article>
             </section>
-            <footer>
-                <div className='footer-boxes'>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>COMPANY</li>
-                            <li>한눈에 보기</li>
-                            <li>위벅스 사명</li>
-                            <li>위벅스 소개</li>
-                            <li>국내 뉴스룸</li>
-                            <li>세계의 위벅스</li>
-                            <li>글로벌 뉴스룸</li>
-                        </ul>
-                    </div>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>CORPORATE SALES</li>
-                            <li>단체 및 기업 구매 안내</li>
-                        </ul>
-                    </div>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>PARTNERSHIP</li>
-                            <li>신규 입점 제의</li>
-                            <li>협력 고객사 등록 신청</li>
-                        </ul>
-                    </div>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>ONLINE COMMUNITY</li>
-                            <li>페이스북</li>
-                            <li>트위터</li>
-                            <li>유튜브</li>
-                            <li>인스타그램</li>
-                        </ul>
-                    </div>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>RECRUIT</li>
-                            <li>채용 소개</li>
-                            <li>채용 지원하기</li>
-                        </ul>
-                    </div>
-                    <div className = 'footer-box'>
-                        <ul>
-                            <li>WEBUCKS</li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     </div> 
     )
 }
 
-export default Detail
+export default Detail;

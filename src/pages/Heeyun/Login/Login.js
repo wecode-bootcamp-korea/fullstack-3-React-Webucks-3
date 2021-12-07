@@ -10,12 +10,10 @@ const Login = () => {
 
     function handleIdInput(event){
         setID(event.target.value);
-        console.log(ID);
     }
 
     function handlePWInput(event){
         setPW(event.target.value);
-        console.log(PW);
     }
 
     function goList(){
@@ -37,12 +35,30 @@ const Login = () => {
                     </div>
                     <form>
                         <div>
-                            <input type="text" id="ID" className='boxes' placeholder="전화번호, 사용자 이름 또는 이메일" onChange = {handleIdInput} />
+                            <input 
+                                type="text" 
+                                id="ID" 
+                                className='boxes' 
+                                placeholder="전화번호, 사용자 이름 또는 이메일" 
+                                onChange = {handleIdInput} 
+                            />
                         </div>
                         <div>
-                            <input type="password" id="password" className='boxes' placeholder="비밀번호" onChange = {handlePWInput} />
+                            <input 
+                                type="password" 
+                                id="password" 
+                                className='boxes' 
+                                placeholder="비밀번호" 
+                                onChange = {handlePWInput} 
+                            />
                         </div>
-                        <button className='boxes' type='button' onClick={goList} style={{backgroundColor : color}} disabled={changeButton(ID,PW)}>
+                        <button 
+                            className='boxes' 
+                            type='button' 
+                            onClick={goList} 
+                            style={{backgroundColor : color}} 
+                            disabled={changeButton(ID,PW)}
+                        >
                             로그인
                         </button>
                     </form>

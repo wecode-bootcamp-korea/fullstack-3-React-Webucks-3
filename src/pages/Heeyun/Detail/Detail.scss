@@ -4,20 +4,25 @@
     font-weight: 400;
     src: url('https://fonts.google.com/icons?selected=Material+Icons:filter_alt&icon.query=heart');
 }
+
 *{
     box-sizing: border-box;
 }
+
 body{
     margin: 0px;
 }
+
 .container{
     margin: 0px;
 }
+
 header{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 .boxes{
     display: flex;
     margin: 20px;
@@ -27,11 +32,13 @@ header{
     background-color: #F4F4F2;
     padding: 5px 20px;
 }
+
 .cursiveWord{
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     font-size: 1.6em;
 }
+
 .top-box{
     display: flex;
     margin: 20px;
@@ -41,35 +48,35 @@ header{
     background-color: #F4F4F2;
     padding: 5px 20px;
 }
+
 #second-box{
     display: block;
     background-color: white;
     margin: 0px;
 }
+
 .title{
     font-size: 2em;
     margin-left:20px;
     font-weight: 600;
 }
+
 .ul-box{
     height: 100%;
     margin-right: 20px;
 }
-/* ul{
-    display: flex;
-    list-style: none;
-    padding-left:0px;
-} */
 
 .linkList li{
     margin-left: 10px;
     color:#a8a8a6;
 }
+
 .linkList{
     display: flex;
     list-style: none;
     padding-left:0px;
 }
+
 .small-linkList{
     display: flex;
     list-style: none;
@@ -85,6 +92,7 @@ header{
     color:#a8a8a6;
     justify-content: flex-end;
 }
+
 i{
     margin-left: 10px;
 }
@@ -96,12 +104,15 @@ section{
     grid-template-columns: 0.7fr 1fr;
     column-gap: 5%;
 }
+
 .coffee-image{
     width: 100%;
 }
+
 .coffee-image img{
     width:100%;
 }
+
 .coffee-title{
     padding-bottom: 10px;
     border-bottom: 2px solid;
@@ -109,24 +120,29 @@ section{
     justify-content: space-between;
     align-items: center;
 }
+
 .small-title{
     margin-top: 0px;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 0px;
 }
+
 .small-title-English{
     font-size :14px;
     font-weight: 500;
     color: #666;
 }
+
 #heart{
     cursor:pointer;
 }
+
 .coffee-description{
     border-bottom: 1px solid #DFDFDF;
     line-height: 1.6;
 }
+
 .coffee-nutrition{
     display: flex;
     justify-content: space-between;
@@ -134,27 +150,32 @@ section{
     border-bottom: 1px solid #DFDFDF;
     font-size: 20px;
 }
+
 .coffee-nutrition-detail{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0px 10px;
 }
+
 .coffee-nutrition-detail-in > ul{
     padding-left: 0px;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .coffee-nutrition-detail-in > ul > li{
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
 }
+
 #left{
     display: flex;
     list-style: none;
     padding-left:0px;
     border-right: 1px dashed #DFDFDF;
 }
+
 .coffee-nutrition-detail-in > ul{
     display: flex;
     list-style: none;
@@ -177,20 +198,24 @@ section{
     padding-bottom: 5px;
     border-bottom: 1px solid #DFDFDF;
 }
+
 a{
     font-weight: bold;
     color: black;
     text-decoration: none;
     margin-right: 7px;
 }
+
 .review-list > ul{
     display: block;
 }
+
 #reviewList{
     list-style: none;
     padding-left:0px;
     line-height: 1.5;
 }
+
 input{
     width: 100%;
     background-color: #F4F4F2;
@@ -199,9 +224,11 @@ input{
     padding: 15px 20px;
     font-size: 15px;
 }
+
 li{
     display: block;
 }
+
 footer{
     margin-top: 100px;
     padding: 20px 20px 0px 20px;
@@ -209,10 +236,12 @@ footer{
     background-color: #333333;
     color: white;
 }
+
 .footer-boxes{
     display: flex;
     justify-content: space-between;
 }
+
 .footer-box > ul{
     list-style: none;
     padding-left:0px;
