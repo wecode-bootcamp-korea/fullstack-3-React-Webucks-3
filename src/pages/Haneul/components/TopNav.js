@@ -4,7 +4,7 @@ function TopNav() {
     return (
         <nav id="navbar" className="wrap">
             <a href="#!" className="navbar__logo">
-            WeBucks
+                WeBucks
             </a>
             <ul className="navbar__menu">
                 <li>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TopNav from '../components/TopNav';
 import BottomNav from '../components/BottomNav';
 import ReviewComment from '../components/ReviewComment';
@@ -22,6 +21,7 @@ function Deatil() {
 
   const [inputText, setinputText] = useState([]);
 
+  // 엔터키 이벤트
   const pressEnterEvent = (e) => {
     if (e.keyCode === 13 && e.target.value.length !== 0) {
       let copy = [...inputText];
@@ -53,8 +53,8 @@ function Deatil() {
                 <i
                   className={heartClick ? 'fas fa-heart heart' : 'far fa-heart'}
                   id="detail-page__content-heart"
-                  onClick={() => setHeartClick(!heartClick)}
-                ></i>
+                  onClick={() => setHeartClick(!heartClick)}>
+                </i>
               </div>
               <div className="detail-page__content-desc">
                 달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 스팀 밀크와
@@ -103,24 +103,39 @@ function Deatil() {
                 <div className="nutrition-info__review">
                   <h3>리뷰</h3>
                   <div className="nutrition-info__review-comment">
-                  {commentsMock.map((commentMock, index) => {
-                      return <ReviewComment key={index} text={commentMock.text} user={commentMock.user}
-                        />;
+                    {/* 기존 댓글 */}
+                    {commentsMock.map((commentMock, index) => {
+                      return (
+                        <ReviewComment 
+                          key={index}
+                          text={commentMock.text}
+                          user={commentMock.user}
+                        />);
                     })}
-                    
+                    {/* 새로 생성되는 댓글 */}
                     {inputText.map((e, i) => {
                       return (
-                        <ReviewComment key={i} text={e} index={i} inputText={inputText} setinputText={setinputText} />);
+                        <ReviewComment
+                          key={i}
+                          text={e} 
+                          index={i} 
+                          inputText={inputText} 
+                          setinputText={setinputText}
+                        />);
                     })}
                   </div>
-                  <input type="text" id="input-review" placeholder="리뷰를 입력해주세요." onKeyDown={(e) => { pressEnterEvent(e); }} />
+                  <input 
+                    type="text" 
+                    id="input-review" 
+                    placeholder="리뷰를 입력해주세요." 
+                    onKeyDown={(e) => { pressEnterEvent(e); }}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <footer id="footer">
         <BottomNav />
       </footer>

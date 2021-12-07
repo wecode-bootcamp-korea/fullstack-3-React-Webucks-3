@@ -13,14 +13,14 @@ function ReviewComment(props) {
             </div>
             <i
                 className={heart === true ? 'fas fa-heart heart' : 'far fa-heart'}
-                onClick={() => setHeart(!heart)}
-            ></i>
+                onClick={() => setHeart(!heart)}>
+            </i>
             <i
                 className="fas fa-trash"
                 onClick={(e) => {
                 e.target.parentElement.remove();
-                }}
-            ></i>
+                }}>
+            </i>
         </div>
     );
 }

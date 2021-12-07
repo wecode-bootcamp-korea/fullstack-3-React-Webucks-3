@@ -4,6 +4,7 @@ import CoffeeCard from '../components/CoffeeCard';
 import './List.scss';
 
 function List() {
+  
   const [mockdata, setMockData] = useState([]);
 
   useEffect(() => {
@@ -25,9 +26,9 @@ function List() {
         </div>
         <article>
           <ul className="coffee-list">
-          {mockdata.cold && mockdata.cold.map((e, i) => {
-            return <CoffeeCard key={i} item={e} />;
-          })}
+            {mockdata.cold && mockdata.cold.map((e, i) => {
+              return <CoffeeCard key={i} item={e} />;
+            })}
           </ul>
         </article>
       </section>

@@ -29,6 +29,7 @@ p {
   margin: 0 auto;
 }
 
+/* 상단 메뉴바 */
 #navbar {
   height: 45px;
   display: flex;
@@ -47,45 +48,58 @@ p {
 
 .navbar__menu {
   display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  a {
+    color: #b9b9b2;
+    font-size: 13px;
+    font-weight: bold;
+  }
 }
 
-.navbar__menu li {
-  margin-right: 20px;
-}
-
-.navbar__menu a {
-  color: #b9b9b2;
-  font-size: 13px;
-  font-weight: bold;
-}
-
+/* 카테고리 */
 .notice {
   background-color: #f4f4f2;
   height: 45px;
   line-height: 45px;
   margin-bottom: 16px;
   padding-left: 20px;
+
+  p span {
+    font-size: 13px;
+  }
+
+  p img {
+    position: relative;
+    bottom: -2px;
+    margin: 0 5px 0 10px;
+  }
 }
 
-.notice p span {
-  font-size: 13px;
-}
-
-.notice p img {
-  position: relative;
-  bottom: -2px;
-  margin: 0 5px 0 10px;
-}
-
+/* 커피 리스트 */
 .coffee-list {
   display: flex;
   flex-wrap: wrap;
-}
 
-.coffee-list li {
-  width: 25%;
-  text-align: center;
-  margin-bottom: 30px;
+  li {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    img {
+      transform: scale(1);
+      transition: all 0.5s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+    }
+  }
 }
 
 .coffee-list__box {
@@ -93,17 +107,6 @@ p {
   width: 200px;
   height: 200px;
   overflow: hidden;
-}
-
-.coffee-list li img {
-  transform: scale(1);
-  transition: all 0.5s ease-in-out;
-}
-
-.coffee-list li img:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
 }
 
 .coffee-list__name .fa-heart {
@@ -121,6 +124,8 @@ p {
   color: rgb(243, 42, 76);
 }
 
+
+/* 반응형 미디어 쿼리 */
 @media screen and (max-width: 1100px) {
   .wrap {
     width: 700px;
@@ -128,10 +133,10 @@ p {
 
   .coffee-list {
     font-size: 15px;
-  }
 
-  .coffee-list li {
-    width: 33%;
+    li {
+      width: 33%;
+    }
   }
 }
 
@@ -142,9 +147,9 @@ p {
 
   .coffee-list {
     font-size: 15px;
-  }
 
-  .coffee-list li {
-    width: 50%;
+    li {
+      width: 50%;
+    }
   }
 }

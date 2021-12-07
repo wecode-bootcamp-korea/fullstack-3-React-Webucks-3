@@ -31,6 +31,7 @@ a {
   margin: 0 auto;
 }
 
+/* 상단 메뉴바 */
 #navbar {
   height: 50px;
   display: flex;
@@ -49,21 +50,20 @@ a {
 
 .navbar__menu {
   display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  a {
+    color: #b9b9b2;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
 }
 
-.navbar__menu li {
-  margin-right: 20px;
-}
-
-.navbar__menu a {
-  color: #b9b9b2;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 2px;
-}
-
-/* detail */
-
+/* 디테일 */
 .detail-title {
   margin-bottom: 15px;
   font-size: 30px;
@@ -111,28 +111,29 @@ a {
   padding: 15px 0;
 }
 
+/* 제품 영양 정보 */
 .nutrition-info h2 {
   padding: 15px;
   border-top: 2px solid #dfdfdf;
   border-bottom: 2px solid #dfdfdf;
   font-size: 20px;
   font-weight: normal;
-}
 
-.nutrition-info h2 div {
-  float: right;
+  div {
+    float: right;
+  }
 }
 
 .nutrition-info__list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-}
 
-.nutrition-info__list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 5px;
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+  }
 }
 
 .nutrition-info__list-1 {
@@ -155,6 +156,7 @@ a {
   margin-bottom: 35px;
 }
 
+/* 리뷰 */
 .nutrition-info__review h3 {
   border-bottom: 2px solid #dfdfdf;
   padding-bottom: 7px;
@@ -164,23 +166,23 @@ a {
 .nutrition-info__review-comment {
   margin-bottom: 10px;
   font-size: 14px;
-}
 
-.nutrition-info__review-comment span {
-  font-weight: bold;
-  margin-right: 5px;
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
 }
 
 .nutrition-info__review-comment__inner {
   display: flex;
   justify-content: space-between;
-}
 
-.nutrition-info__review-comment__inner div {
-  width: 490px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  div {
+    width: 490px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .nutrition-info__review-comment__inner .fa-heart:hover,
@@ -200,23 +202,21 @@ a {
   border-radius: 3px;
   padding-left: 10px;
   margin-bottom: 100px;
-}
-
-#input-review:focus {
   outline: none;
 }
 
+/* 푸터 */
 #footer {
   background-color: #333333;
   color: #fff;
-}
 
-#footer .container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-size: 14px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 14px;
+  }
 }
 
 .footer-title {

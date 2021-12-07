@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Detail/Detail.scss';
 
 function BottomNav() {
     return (

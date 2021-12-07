@@ -24,6 +24,7 @@ body {
   margin: 60px 0 30px;
 }
 
+/* 로그인 input */
 .login-input {
   position: relative;
   width: 320px;
@@ -48,6 +49,7 @@ body {
   font-weight: bold;
 }
 
+/* hide & show 버튼 */
 #user-pw__btn {
   width: 50px;
   border: none;
@@ -56,12 +58,13 @@ body {
   padding-top: 6px;
   right: 3px;
   font-size: 15px;
+
+  & :hover {
+    cursor: pointer;
+  }
 }
 
-#user-pw__btn:hover {
-  cursor: pointer;
-}
-
+/* 로그인 버튼 */
 .login-button {
   width: 320px;
   height: 40px;
@@ -70,10 +73,10 @@ body {
   color: #fff;
   font-size: 17px;
   margin-bottom: 140px;
-}
 
-.login-button:hover {
-  cursor: pointer;
+  & :hover {
+    cursor: pointer;
+  }
 }
 
 .find-pw {

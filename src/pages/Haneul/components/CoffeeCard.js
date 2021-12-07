@@ -16,19 +16,19 @@ function CoffeeCard(props) {
         <>
             <li>
                 <div className="coffee-list__box">
-                <img
-                    src={props.item.img} alt="커피"
-                    width="200px"
-                    height="200px"
-                    onClick={goToDetail}
-                />
+                    <img
+                        src={props.item.img} alt="커피"
+                        width="200px"
+                        height="200px"
+                        onClick={goToDetail}
+                    />
                 </div>
                 <p className="coffee-list__name">
                 {props.item.name} &nbsp;
-                <i
-                className={heart === true ? 'fas fa-heart heart' : 'far fa-heart'}
-                onClick={() => setHeart(!heart)}
-                ></i>
+                    <i
+                        className={heart === true ? 'fas fa-heart heart' : 'far fa-heart'}
+                        onClick={() => setHeart(!heart)}>
+                    </i>
                 </p>
             </li>
         </>
