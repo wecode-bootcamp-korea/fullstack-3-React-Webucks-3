@@ -8,7 +8,7 @@ import Topnav from "../Topnav/Topnav";
 import CoffeeCard from "./CoffeeCard";
 
 function ListMingi() {
-	const [coffeeList, setCoffeeList] = useState([]);
+	const [coffeeList, setCoffeeList] = useState({});
 
 	useEffect(() => {
 		fetch("http://localhost:3000/data/mingi/coffees.json")
@@ -18,19 +18,6 @@ function ListMingi() {
 			});
 	}, []);
 
-	// const [BrewedCoffeeList, setBrewedCoffeeList] = useState([]);
-
-	// useEffect(() => {
-	//     fetch('http://localhost:3000/data/brewedCoffee.json', {
-	//       method: 'GET'
-	//     })
-	//       .then(res => res.json())
-	//       .then(data => {
-	//         setBrewedCoffeeList(data);
-	//       });
-	//   },[])
-
-	console.log(coffeeList);
 	return (
 		<>
 			<Topnav />
@@ -61,7 +48,7 @@ function ListMingi() {
 						<span>디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
 					</section>
 					<section className="menuList">
-						{coffeeList.brewed &&
+						{coffeeList.coldBrew &&
 							coffeeList.brewed.map((coffee) => {
 								return (
 									<CoffeeCard image={coffee.image} explain={coffee.explain} />

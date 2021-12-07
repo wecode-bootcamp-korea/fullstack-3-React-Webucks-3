@@ -20,7 +20,7 @@ function LoginMingi() {
 		pwBackgroundColor: "hsl(0deg 0% 97%)",
 	});
 
-	const idCondition = () => {
+	const Condition = () => {
 		if (idValue.includes("@")) {
 			setOkColor((prevState) => ({
 				...prevState,
@@ -77,7 +77,7 @@ function LoginMingi() {
 						<input
 							className="innerBox"
 							onChange={handleIdInput}
-							onKeyUp={idCondition}
+							onKeyUp={Condition}
 							value={idValue}
 							style={{
 								borderColor: okColor.idBorderColor,
@@ -90,7 +90,7 @@ function LoginMingi() {
 						<input
 							className="innerBox"
 							onChange={handlePwInput}
-							onKeyUp={idCondition}
+							onKeyUp={Condition}
 							value={pwValue}
 							style={{
 								borderColor: okColor.pwBorderColor,
