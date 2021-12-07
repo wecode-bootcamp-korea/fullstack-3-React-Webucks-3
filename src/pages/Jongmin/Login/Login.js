@@ -10,6 +10,13 @@ function Login() {
     navigate("/list-jongmin");
   };
 
+  // 이메일 및 암호 입력후 enter키 입력시 list 페이지로 이동 구현
+  const onKeyPress = (e) => {
+    if (e.key == "Enter") {
+      goToList();
+    }
+  };
+
   // 이메일 및 암호 입력시 state에 저장 구현
   const [emailInputState, setEmailInputState] = useState("");
   const [passwordInputState, setPasswordInputState] = useState("");
@@ -42,6 +49,7 @@ function Login() {
               placeholder="전화번호, 사용자 이름 또는 이메일"
               onChange={handleIdInput}
               value={emailInputState}
+              onKeyPress={validation ? onKeyPress : null}
             />
             <input
               type="password"
@@ -49,11 +57,12 @@ function Login() {
               placeholder="비밀번호"
               onChange={handlePwInput}
               value={passwordInputState}
+              onKeyPress={validation ? onKeyPress : null}
             />
             <button
               id="login-button"
               type="submit"
-              onClick={goToList}
+              onClick={validation ? goToList : null}
               style={{
                 backgroundColor: validation
                   ? "#60ADED"
