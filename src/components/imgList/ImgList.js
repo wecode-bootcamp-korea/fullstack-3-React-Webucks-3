@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 const ImgList = (props) =>{
     return(
         <div className="photoBox">

@@ -39,6 +39,9 @@
 
                 .small-title{
                     margin-right: 8px;
+                    font-size : 20px;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
                 }
                 .material-icons{
                     margin-right: 5px;
@@ -86,6 +89,7 @@
                                 text-align: center;
                                 justify-content: last baseline;
                                 margin-bottom: 0px;
+                                font-weight: normal;
                             } 
                     }
                 }      

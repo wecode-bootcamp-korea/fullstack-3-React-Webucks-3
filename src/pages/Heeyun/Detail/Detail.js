@@ -1,11 +1,11 @@
 import React from 'react'
 import './Detail.scss';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
 import ImgDetail from '../../../components/imgList/ImgDetail';
 import { useState, useEffect } from 'react';
 
 const Detail = () => {
+
     const [imgData, setImgData] = useState([]);
 
     useEffect(() => {
@@ -37,6 +37,7 @@ const Detail = () => {
             event.target.value = null; 
         }
     }
+
     const Comment = (props) => {
         return (
             <li>
@@ -44,6 +45,7 @@ const Detail = () => {
             </li>
         );
     }
+
     return (
     <div className = 'Detail'> 
         <div className='container'>
@@ -77,7 +79,8 @@ const Detail = () => {
             <section>
                 {imgData.map(el => 
                     <ImgDetail coffeeImg={el.img} coffeeName = {el.title}/>
-                )}
+                    )
+                }
                 <article>
                     <div className='coffee-title'>
                         <h4 className='small-title'>
@@ -86,7 +89,11 @@ const Detail = () => {
                             <span className='small-title-English'>
                                 Coffee 1</span>
                         </h4>
-                        <span className="material-icons" id='heart' onClick={clickHeart} style={{color : heartColor}}>
+                        <span className="material-icons" 
+                            id='heart' 
+                            onClick={clickHeart} 
+                            style={{color : heartColor}
+                        }>
                             favorite_border
                         </span>
                     </div>
@@ -151,10 +158,12 @@ const Detail = () => {
                                     <span>오함마 들고 찾아갑니다.</span>
                                 </li>
                                 {comment.map((el) => {
-                                    return (
-                                    <Comment comment = {el}/>
-                                    );
-                                })}
+                                        return (
+                                        <Comment comment = {el}/>
+                                            );
+                                        }
+                                    )
+                                }
                             </ul>
                         </div>
                     </div>

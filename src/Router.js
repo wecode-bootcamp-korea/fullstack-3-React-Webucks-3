@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Heeyun/Login/Login'
 import List from './pages/Heeyun/List/List'
