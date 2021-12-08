@@ -27,6 +27,7 @@ function Review() {
 
       let reviewIDDiv = document.createElement("div");
       reviewDetailPartDiv.appendChild(reviewIDDiv);
+      // div 생성 및 노드 연결 - 끝
 
       // 리뷰 삭제 버튼과 리뷰를 묶는 div 생성
       let reviewCommentWithDel = document.createElement("div");
@@ -57,12 +58,13 @@ function Review() {
       let reviewCommentClass = document.createAttribute("class");
       reviewCommentClass.value = "reviewComment";
       reviewCommentDiv.setAttributeNode(reviewCommentClass);
+      // class 생성 - 끝
 
       // 리뷰 삭제 버튼 id 생성
       let reviewDelClass = document.createAttribute("id");
       reviewDelClass.value = "reviewDel";
       reviewDel.setAttributeNode(reviewDelClass);
-      // 리뷰 삭제 버튼 ID 생성 - 끝
+      // 리뷰 삭제 버튼 id 생성 - 끝
 
       reviewIDDiv.innerText = idFront;
       reviewCommentDiv.innerText = reviewComment;
@@ -76,21 +78,8 @@ function Review() {
         <div id="reviewTitle">리뷰</div>
         <div id="reviewDetail">
           <div className="reviewDetailPart">
-            <div className="reviewID">coff_lover</div>
-            <div className="reviewComment">너무 맛있어요!</div>
-          </div>
-          <div className="reviewDetailPart">
-            <div className="reviewID">CHOCO7</div>
-            <div className="reviewComment">
-              오늘도 화이트 초콜릿 모카를 마시러 갑니다.
-            </div>
-          </div>
-          <div className="reviewDetailPart">
-            <div className="reviewID">legend_dev</div>
-            <div className="reviewComment">
-              진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는
-              전설이다. 진짜 화이트 초...
-            </div>
+            <div className="reviewID"></div>
+            <div className="reviewComment"></div>
           </div>
         </div>
         <input
