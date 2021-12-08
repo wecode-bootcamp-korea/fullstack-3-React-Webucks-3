@@ -9,6 +9,14 @@ body {
 li {
   margin: 0;
   padding: 0;
+  
+  .topbanner-list {
+    margin-right: 10px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    color: gray;
+  } /* 상단 배너 내의 버튼들을 디자인해주는 CSS */
 }
 
 ul {
@@ -18,6 +26,12 @@ ul {
   list-style: none;
 }
 
+#one {
+  display: flex;
+  img {
+    width: 95%;
+  }
+} /* container div중 하나를 선택하기 위한 id태그*/
 
 nav {
   display: flex;
@@ -37,14 +51,6 @@ nav {
   font-weight: bold;
 } /* Webucks font를 위한 CSS*/
 
-li .topbanner-list {
-  margin-right: 10px;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-  color: gray;
-} /* 상단 배너 내의 버튼들을 디자인해주는 CSS */
-
 .container {
   width: 900px;
   margin: 10px auto;
@@ -52,49 +58,53 @@ li .topbanner-list {
   .first {
     width: 50%;
     margin-right: 5px;
+
+    .coldbrew {
+      font-size: 23px;
+      font-weight: bold;
+    }
   } /* 화면을 이분할하기 위해 width에 50% 적용 */
   
   .second {
     width: 50%;
+
+    .gray {
+      text-align: right;
+      color: gray;
+      font-size: 12px;
+      font-style: bold;
+    }
   } /* 화면을 이분할하기 위해 width에 50% 적용 */
-  
 } /*폭을 일정하게 담기 위한 css*/
+
+.RightTop {
+  display: flex;
+  justify-content: space-between;
+  .coffeename {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .coffeename2 {
+    font-size: 13px;
+    margin-top: 3px;
+    padding-bottom: 5px;
+  }
+  
+  .heartRightTop{
+    padding-top:10px;
+    a{
+      color:red;
+      font-size:50px;
+      margin-bottom:25px;
+    }
+  }
+}
 
 .left {
   font-size: 20px;
   font-weight: bold;
-}
-
-.coldbrew {
-  font-size: 23px;
-  font-weight: bold;
-}
-
-#one {
-  display: flex;
-  img {
-    width: 95%;
-  }
-} /* container div중 하나를 선택하기 위한 id태그*/
-
-
-.gray {
-  text-align: right;
-  color: gray;
-  font-size: 12px;
-  font-style: bold;
-}
-
-.coffeename {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.coffeename2 {
-  font-size: 13px;
-  margin-top: 3px;
-  padding-bottom: 5px;
 }
 
 .seconddetail {
@@ -114,6 +124,7 @@ li .topbanner-list {
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0;
+  
   span {
     margin-left: 12px;
     margin-right: 12px;
@@ -122,7 +133,6 @@ li .topbanner-list {
     margin-bottom: 0;
   }
 }
-
 
 .productdetail2 {
   display: flex;
@@ -167,6 +177,7 @@ li .topbanner-list {
   border-radius: 3px;
   font-weight: bold;
 }
+
 .reviewnav {
   font-size: 20px;
   font-weight: bold;
@@ -175,14 +186,42 @@ li .topbanner-list {
   padding-bottom: 15px;
 }
 
-.id {
-  font-weight: bold;
-  font-size: 13px;
-}
+.comment {
+  position: relative;
+  margin: 3px;
+  
+  .userId {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  .userMent {
+    font-size: 13px;
+    margin-left: 5px;
+  }
 
-.ment {
-  font-size: 13px;
-  margin-left: 5px;
+  .longment{
+    width:88%;
+  }
+  
+  .longment-button{
+    width:12%;
+
+    .deletebutton {
+      position: absolute;
+      right: 0;
+      font-size: 8px;
+      padding: 1px;
+      margin-right: 25px;
+    }
+  
+    .commentheart {
+      position: absolute;
+      font-size: 20px;
+      color: red;
+      right:0;
+    }
+  }
 }
 
 .reviewcomment {
@@ -217,54 +256,3 @@ li .topbanner-list {
   }
   /* 최하단부의 ul과 li에 적용된 CSS*/
 } /* 최하단부의 배너를 포괄하는 div의 CSS*/
-
-#fifth {
-  display: flex;
-  justify-content: space-between;
-}
-
-#heart3 {
-  font-size: 40px;
-  color: red;
-
-  margin-top: 20px;
-}
-
-.comment {
-  position: relative;
-  margin: 3px;
-  
-  .deletebutton {
-    position: absolute;
-    right: 0;
-    font-size: 8px;
-    padding: 1px;
-    margin-right: 25px;
-  }
-
-  .commentheart {
-    position: absolute;
-    font-size: 20px;
-    color: red;
-    right:0;
-  }
-
-  .longment{
-    width:88%;
-  }
-  
-  .longment-button{
-    width:12%;
-  }
-}
-
-#heart2{
-  padding-top:10px;
-  a{
-    color:red;
-    font-size:50px;
-    margin-bottom:25px;
-  }
-}
-
-

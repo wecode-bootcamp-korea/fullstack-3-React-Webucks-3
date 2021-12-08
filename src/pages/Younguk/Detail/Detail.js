@@ -15,19 +15,16 @@ function Detail() {
             .then(res => res.json())
             .then(res =>
                 normalCommentSet(res));
-    }, [])
-
+    }, []) // 기존 댓글 fetch
 
     const [commentData, commentAdder] = useState([]);
     const enter = (e) => {
         if (e.key === 'Enter') {
-            let newArr = [...commentData];
-            newArr.push(e.target.value);
+            let newArr = [...commentData, e.target.value]; // deep copy를 통한 배열 추가
             commentAdder(newArr);
             e.target.value = '';
         }
-    }
-
+    } // 
 
     const [heartshapetop, heartshapeChange] = useState(regularHeart);
     function clickTop() {
@@ -56,12 +53,12 @@ function Detail() {
                         <br />
                         <p className="gray">홈 {'>'} MENU {'>'} 음료 {'>'} 에스프레소 {'>'} 화이트 초콜릿 모카</p>
 
-                        <div id="fifth">
+                        <div className="RightTop">
                             <div className="emojiright">
                                 <p className="coffeename">화이트 초콜릿 모카</p>
                                 <p className="coffeename2">White Chocolate Mocha</p>
                             </div>
-                            <div id="heart2">
+                            <div className="heartRightTop">
                                 <a href="#"><FontAwesomeIcon
                                     icon={heartshapetop}
                                     onClick={clickTop}
@@ -124,7 +121,8 @@ function Detail() {
                                         <SingleComment
                                             id={e.id}
                                             e={e.ment}
-                                            index={i}
+                                            key={i}
+
                                         />
                                     )
                                 })
@@ -140,7 +138,8 @@ function Detail() {
                                         <SingleComment
                                             id={"G-Dragon"}
                                             e={e}
-                                            index={i}
+                                            key={i}
+
                                         />
                                     )
                                 })
@@ -148,7 +147,7 @@ function Detail() {
                         </div>
 
                         <input text="" placeholder="리뷰를 입력해주세요" className="reviewcomment"
-                            onKeyPress={(e) => enter(e)} />
+                            onKeyPress={enter} />
                     </div>
                 </div>
             </section>
@@ -204,7 +203,6 @@ function Detail() {
                     <div>
                         <p>WEBUCKS</p>
                     </div>
-
                 </div>
             </footer>
         </>

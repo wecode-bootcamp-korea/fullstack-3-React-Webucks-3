@@ -13,18 +13,18 @@ function SingleComment(props) {
         else {
             heartshapeChange(regularHeart);
         }
-    }
+    } // 댓글의 하트 버튼 기능
 
     return (
         <div className="comment">
             <div class="longment">
-                <span className="id">{props.id}</span>
-                <span className="ment">{props.e}
+                <span className="userId">{props.id}</span>
+                <span className="userMent">{props.e}
                 </span>
             </div>
             <div class="longment-button">
                 <button className="deletebutton" onClick={(e) => { e.target.parentElement.parentElement.remove(); }}>삭제</button>
-                <a href="#" className="commentheart" id={props.index}>
+                <a href="#" className="commentheart">
                     <FontAwesomeIcon
                         icon={heartshape}
                         onClick={click}

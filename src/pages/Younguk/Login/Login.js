@@ -13,33 +13,51 @@ function Login() {
   const [saveID, saveIDchange] = useState(''); // ID 입력을 위한 State
   const [savePW, savePWchange] = useState(''); // PW 입력을 위한 State
 
+  const [showhide, showhideSet] = useState('password');
+  const showhideChange = () => {
+    if (showhide === 'password') {
+      showhideSet('text')
+    }
+    else {
+      showhideSet('password')
+    }
+  } // show&hide 기능 구현
+
 
   return (
-    <section>
-      <h1>WeBucks</h1>
-      <div className="input">
-        <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" class="userid"
-          onChange={(e) => saveIDchange(e.target.value)} />
-      </div>
-      <div className="input">
-        <input type="password" placeholder="비밀번호" className="pw"
-          onChange={(e) => savePWchange(e.target.value)} />
+    <>
+      <section>
+        <h1>WeBucks</h1>
+        <div className="input">
+          <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" class="userid"
+            onChange={(e) => saveIDchange(e.target.value)} />
+        </div>
+        <div className="input">
+          <input type={showhide} placeholder="비밀번호" className="pw"
+            onChange={(e) => savePWchange(e.target.value)} />
 
-        <button className="hide">show&hide</button>
-      </div>
+          <button
+            className="hide"
+            onClick={showhideChange}>
+            show&hide
+          </button>
+        </div>
+      </section>
 
-      <div className="btn">
-        <button className="but" disabled={
-          saveID.includes('@') && savePW.length >= 5 ?
-            false : true
-        }
-          onClick={goToList}>로그인</button>
-      </div>
+      <footer>
+        <div className="btn">
+          <button className="but" disabled={
+            saveID.includes('@') && savePW.length >= 5 ?
+              false : true
+          }
+            onClick={goToList}>로그인</button>
+        </div>
 
-      <div className="forget">
-        <Link to='Detail'>비밀번호를 잊으셨나요?</Link>
-      </div>
-    </section>
+        <div className="forget">
+          <Link to='Detail'>비밀번호를 잊으셨나요?</Link>
+        </div>
+      </footer>
+    </>
   );
 }
 
