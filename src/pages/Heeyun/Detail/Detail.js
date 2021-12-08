@@ -77,10 +77,11 @@ const Detail = () => {
                 </div>
             </div>
             <section>
-                {imgData.map(el => 
+                {imgData.map((el,i) => 
                     <ImgDetail 
                         coffeeImg={el.img} 
                         coffeeName = {el.title}
+                        key = {i}
                     />
                     )
                 }
@@ -147,7 +148,7 @@ const Detail = () => {
                     <div className='review'>
                         <h3>리뷰</h3>
                         <div className='review-list'>
-                            <ul id='reviewList'>
+                            <ul>
                                 <li>
                                     <a href='https://www.naver.com/'>coffee_lover</a>
                                     <span>당장 환불해주세요</span>
@@ -160,9 +161,9 @@ const Detail = () => {
                                     <a href='https://www.naver.com/'>webucks_killer</a>
                                     <span>오함마 들고 찾아갑니다.</span>
                                 </li>
-                                {comment.map((el) => {
+                                {comment.map((el,i) => {
                                         return (
-                                        <Comment comment = {el}/>
+                                        <Comment comment = {el} key={i}/>
                                             );
                                         }
                                     )

@@ -2,97 +2,96 @@
 .List{
     box-sizing: border-box;
 
-        section{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        
-            .boxes{
-            display: flex;
-            margin: 20px;
-            justify-content: space-between;
-            width: auto;
-            align-items: center;
-            background-color: #F4F4F2;
-            padding: 5px 20px;
+    section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+        .boxes{
+        display: flex;
+        margin: 20px;
+        justify-content: space-between;
+        width: auto;
+        align-items: center;
+        background-color: #F4F4F2;
+        padding: 5px 20px;
 
-                .cursiveWord{
-                font-family: 'Dancing Script', cursive;
-                font-weight: bold;
-                font-size: 2em;
-                }
-                ul{
-                    display: flex;
-                    list-style: none;
-                }
-                .linkList>{
-                    li{
-                        margin-right: 10px;
-                        color:#a8a8a6;
-                    }
-                }
+            .cursiveWord{
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-size: 2em;
             }
-              
-            #box-title{
+            ul{
                 display: flex;
-                justify-content: flex-start;
-
-                .small-title{
-                    margin-right: 8px;
-                    font-size : 20px;
-                    margin-block-start: 1em;
-                    margin-block-end: 1em;
-                }
-                .material-icons{
-                    margin-right: 5px;
-                }
-                .small-description{
-                    margin-left: 5px;
-                    font-size: 14px;
-                }
+                list-style: none;
             }
-            .photo{
-                    .photoList{
-                        width: 100%;
-                        padding-left: 0px;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr 1fr;
-                        object-fit: cover;
-                        margin-bottom: 0px;
+            .linkList > li{
+                    margin-right: 10px;
+                    color:#a8a8a6;
+            }
+        }
+            
+        #box-title{
+            display: flex;
+            justify-content: flex-start;
 
-                        .photoBox{
+            .small-title{
+                margin-right: 8px;
+                font-size : 20px;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+            }
+            .material-icons{
+                margin-right: 5px;
+            }
+            .small-description{
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+
+        .photo{
+            .photoList{
+                width: 100%;
+                padding-left: 0px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                object-fit: cover;
+                margin-bottom: 0px;
+
+                .photoBox{
+                    overflow: hidden;
+                    list-style: none;
+                    
+                    li{
+                        height: 80%;
+                        overflow: hidden;
+                        /* 얘랑 이미지 태그가  겹쳐서 잘못됨*/
+                        margin: 0px 20px;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
                             overflow: hidden;
+                            transition: transform 1s, filter 2s ease-in-out;
+                            object-fit: cover;
                             
-                                li{
-                                    height: 80%;
-                                    overflow: hidden;
-                                    /* 얘랑 이미지 태그가  겹쳐서 잘못됨*/
-                                    margin: 0px 20px;
-
-                                img{
-                                    width: 100%;
-                                    height: 100%;
-                                    overflow: hidden;
-                                    transition: transform 1s, filter 2s ease-in-out;
-                                    object-fit: cover;
-                                    
-                                    
-                                }
-                                img:hover{
-                                        transform: scale(1.1);
-                                }
-                                
-                            }
-                            p{
-                                line-height: 20px;
-                                font-size: 2vw;
-                                text-align: center;
-                                justify-content: last baseline;
-                                margin-bottom: 0px;
-                                font-weight: normal;
-                            } 
+                            
+                        }
+                        img:hover{
+                                transform: scale(1.1);
+                        }
+                    
                     }
-                }      
+                    p{
+                        line-height: 20px;
+                        font-size: 2vw;
+                        text-align: center;
+                        margin-bottom: 0px;
+                        font-weight: normal;
+                    } 
+                }
+            }      
         }
     }
 }

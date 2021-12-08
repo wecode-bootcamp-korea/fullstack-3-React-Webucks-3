@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 const ImgList = ({coffeeImg, coffeeName}) =>{
     return(
         <div className="photoBox">
-            < Link to = '/detail'>
+            < Link to = '/detail' style={{textDecoration : 'none'}}>
                 <li>
                     <img src={coffeeImg} alt={coffeeName} />
                 </li> 
