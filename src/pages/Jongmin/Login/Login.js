@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   // 로그인 버튼 클릭시 이동 경로 구현
@@ -12,7 +12,7 @@ function Login() {
 
   // 이메일 및 암호 입력후 enter키 입력시 list 페이지로 이동 구현
   const onKeyPress = (e) => {
-    if (e.key == "Enter") {
+    if (e.key === "Enter") {
       goToList();
     }
   };
