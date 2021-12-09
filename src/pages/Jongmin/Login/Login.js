@@ -6,17 +6,6 @@ function Login() {
   // 로그인 버튼 클릭시 이동 경로 구현
   const navigate = useNavigate();
 
-  const goToList = () => {
-    navigate("/list-jongmin");
-  };
-
-  // 이메일 및 암호 입력후 enter키 입력시 list 페이지로 이동 구현
-  const onKeyPress = (e) => {
-    if (e.key === "Enter") {
-      goToList();
-    }
-  };
-
   // 이메일 및 암호 입력시 state에 저장 구현
   const [emailInputState, setEmailInputState] = useState("");
   const [passwordInputState, setPasswordInputState] = useState("");
@@ -28,6 +17,44 @@ function Login() {
   const handlePwInput = (e) => {
     setPasswordInputState(e.target.value);
   };
+
+  // const goToList = () => {
+  //   navigate("/list-jongmin");
+  // };
+
+  // goToList 수정
+  const goToList = () => {
+    fetch("http://52.79.143.176:8000/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // headers: [["Content-Type", "application/json"]],
+      body: JSON.stringify({
+        email: emailInputState,
+        password: passwordInputState,
+      }),
+    })
+      .then((response) => response.json())
+      .then(
+        (result) => console.log("결과: ", result),
+        navigate("/list-jongmin")
+      );
+  };
+
+  // 이메일 및 암호 입력후 enter키 입력시 list 페이지로 이동 구현
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
+      goToList();
+    }
+  };
+
+  // 신규
+  // const [inputs, setInputs] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  // const { email, password } = inputs;
 
   // 이메일 및 암호 조건 구현
   const validation =
@@ -71,9 +98,6 @@ function Login() {
             >
               로그인
             </button>
-            {/* <Link to="/list" id="login-button">
-              로그인
-            </Link> */}
           </div>
           <div id="forgot-password">
             <p>비밀번호를 잊으셨나요?</p>
