@@ -1,5 +1,6 @@
 import "./Login.scss";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 function LoginMingi() {
@@ -68,6 +69,31 @@ function LoginMingi() {
 			setPwShow({ type: "password", text: "show" });
 		}
 	};
+
+	const navigate = useNavigate();
+
+	const goToList = () => {
+		navigate("/list-Mingi");
+	};
+
+	const loginLogic = () => {
+		fetch("http://52.79.143.176:8000/users/login", {
+			method: "POST",
+			headers: [["Content-Type", "application/json"]],
+			body: JSON.stringify({
+				email: idValue,
+				password: pwValue,
+			}),
+		}).then((res) => {
+			if (res.status === 200) {
+				goToList();
+				sessionStorage.setItem("token", res.json().token);
+			} else if (res.status === 400) {
+				alert("아이디와 비밀번호를 확인하시오");
+			}
+		});
+	};
+
 	return (
 		<div className="login">
 			<div className="body">
@@ -105,11 +131,13 @@ function LoginMingi() {
 						</button>
 					</form>
 					<section className="buttonBox">
-						<Link to="/list-Mingi">
-							<button disabled={confirmCondition} id="button">
-								로그인
-							</button>
-						</Link>
+						<button
+							disabled={confirmCondition}
+							onClick={loginLogic}
+							id="button"
+						>
+							로그인
+						</button>
 					</section>
 					<section className="findPw">
 						<a href="/">비밀번호를 잊으셨나요?</a>
