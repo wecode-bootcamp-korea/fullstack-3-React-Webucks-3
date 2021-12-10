@@ -1,0 +1,54 @@
+{
+  "coffeelist1": [
+    {
+      "imgsrc": "/images/coffeeimg.jpeg",
+      "coffeename": "아메리카노"
+    },
+    {
+      "imgsrc": "/images/뿌링클.jpeg",
+      "coffeename": "뿌링클"
+    },
+    {
+      "imgsrc": "/images/엽떡.jpeg",
+      "coffeename": "엽떡"
+    },
+    {
+      "imgsrc": "/images/짜파게티.jpeg",
+      "coffeename": "짜파게티"
+    },
+    {
+      "imgsrc": "/images/토마토.jpeg",
+      "coffeename": "토마토"
+    },
+    {
+      "imgsrc": "/images/허니콤보.jpeg",
+      "coffeename": "허니콤보"
+    },
+    {
+      "imgsrc": "/images/coffeeimg.jpeg",
+      "coffeename": "카푸치노"
+    },
+    {
+      "imgsrc": "/images/coffeeimg.jpeg",
+      "coffeename": "카페라떼"
+    },
+    {
+      "imgsrc": "/images/짜파게티.jpeg",
+      "coffeename": "짜파게티"
+    },
+    {
+      "imgsrc": "/images/생수.jpeg",
+      "coffeename": "생수"
+    }
+  ],
+  "coffeelist2": [
+    {
+      "imgsrc": "/images/coffeedetailpage.png",
+      "coffeename": "라떼는 말이야"
+    },
+    {
+      "imgsrc": "/images/후라이.jpeg",
+      "coffeename": "후라이"
+    }
+  ]
+}
