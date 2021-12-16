@@ -1,0 +1,40 @@
+.CoffeeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 300px;
+
+  .imgHover {
+    overflow: hidden;
+  }
+
+  .coffeeDetail {
+    cursor: pointer;
+  }
+
+  img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
+  }
+
+  .coffeeTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
+
+  #heart {
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
