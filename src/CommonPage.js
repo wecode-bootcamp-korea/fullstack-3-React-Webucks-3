@@ -4,33 +4,33 @@ import "./CommonPage.css";
 
 function CommonPage() {
   return (
-    <>
-      <Link to="/login-haneul" className="team3Pages">
+    <div className="team3Pages">
+      <Link to="/login-haneul" className="hnPage">
         <button id="login-button" type="submit">
-          하늘's 웹페이지
+          Haneul
         </button>
       </Link>
-      <Link to="/login-heeyun" className="team3Pages">
+      <Link to="/login-heeyun" className="hyPage">
         <button id="login-button" type="submit">
-          희윤's 웹페이지
+          Heeyun
         </button>
       </Link>
-      <Link to="/login-jongmin" className="team3Pages">
+      <Link to="/login-jongmin" className="jmPage">
         <button id="login-button" type="submit">
-          종민's 웹페이지
+          Jongmin
         </button>
       </Link>
-      <Link to="/login-mingi" className="team3Pages">
+      <Link to="/login-mingi" className="mgPage">
         <button id="login-button" type="submit">
-          민기's 웹페이지
+          Mingi
         </button>
       </Link>
-      <Link to="/login-younguk" className="team3Pages">
+      <Link to="/login-younguk" className="yuPage">
         <button id="login-button" type="submit">
-          영욱's 웹페이지
+          Younguk
         </button>
       </Link>
-    </>
+    </div>
   );
 }
 

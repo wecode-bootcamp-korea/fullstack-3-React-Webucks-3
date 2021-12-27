@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* 상단 메뉴바 */
+#navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f2;
+  margin-bottom: 16px;
+}
+
+.navbar__logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar__menu {
+  display: flex;
+
+  li {
+    margin-right: 20px;
+  }
+
+  a {
+    color: #b9b9b2;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+}
+
+/* 디테일 */
+.detail-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.detail-page__content__title {
+  border-bottom: 3px solid black;
+}
+
+.detail__route {
+  text-align: end;
+  padding-bottom: 15px;
+  font-size: 13px;
+  color: #9c9c9c;
+}
+
+.detail-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-page__content {
+  width: 530px;
+}
+
+.detail-page__content-title {
+  position: relative;
+  padding-bottom: 15px;
+  border-bottom: 2px solid black;
+}
+
+.detail-page__content-title .heart {
+  color: rgb(243, 42, 76);
+}
+
+#detail-page__content-heart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.detail-page__content-desc {
+  padding: 15px 0;
+}
+
+/* 제품 영양 정보 */
+.nutrition-info h2 {
+  padding: 15px;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #dfdfdf;
+  font-size: 20px;
+  font-weight: normal;
+
+  div {
+    float: right;
+  }
+}
+
+.nutrition-info__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+  }
+}
+
+.nutrition-info__list-1 {
+  border-right: 2px dotted #dfdfdf;
+}
+
+.nutrition-info__list-1,
+.nutrition-info__list-2 {
+  width: 50%;
+  padding: 15px 5px;
+}
+
+.nutrition-info__allergy {
+  height: 45px;
+  border-radius: 5px;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  margin-bottom: 35px;
+}
+
+/* 리뷰 */
+.nutrition-info__review h3 {
+  border-bottom: 2px solid #dfdfdf;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+}
+
+.nutrition-info__review-comment {
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}
+
+.nutrition-info__review-comment__inner {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    width: 490px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.nutrition-info__review-comment__inner .fa-heart:hover,
+.nutrition-info__review-comment__inner .fa-trash:hover {
+  cursor: pointer;
+}
+
+.nutrition-info__review-comment__inner .heart {
+  color: rgb(243, 42, 76);
+}
+
+#input-review {
+  width: 100%;
+  height: 30px;
+  background-color: #efefef;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-bottom: 100px;
+  outline: none;
+}
+
+/* 푸터 */
+#footer {
+  background-color: #333333;
+  color: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 14px;
+  }
+}
+
+.footer-title {
+  margin-bottom: 10px;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+}

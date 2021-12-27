@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+#login {
+  width: 420px;
+  height: 550px;
+  border: 2px solid #e3e3e3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin: 100px auto 100px;
+}
+
+.login-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin: 60px 0 30px;
+}
+
+/* 로그인 input */
+.login-input {
+  position: relative;
+  width: 320px;
+  margin-bottom: 17px;
+}
+
+#user-id,
+#user-pw {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #e3e3e3;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: #a1a1a1;
+  padding-left: 10px;
+  outline: none;
+}
+
+::placeholder {
+  color: #afafaf;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* hide & show 버튼 */
+#user-pw__btn {
+  width: 50px;
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  padding-top: 6px;
+  right: 3px;
+  font-size: 15px;
+
+  & :hover {
+    cursor: pointer;
+  }
+}
+
+/* 로그인 버튼 */
+.login-button {
+  width: 320px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 140px;
+
+  & :hover {
+    cursor: pointer;
+  }
+}
+
+.find-pw {
+  text-decoration: none;
+  color: #134072;
+  opacity: 0.8;
+  font-size: 13px;
+  font-weight: bold;
+}
