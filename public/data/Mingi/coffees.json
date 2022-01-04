@@ -1,0 +1,69 @@
+{
+  "coldBrew" :
+  [
+    {
+      "id" : 1,
+      "image": "/images/mingi/콜드 브루.jpg",
+      "explain": "콜드 브루"
+    },
+    {
+      "id" : 2,
+      "image": "/images/mingi/돌체 콜드 브루.jpg",
+      "explain": "돌체 콜드 브루"
+    },
+    {
+      "id" : 3,
+      "image": "/images/mingi/바닐라 크림 콜드 브루.jpg",
+      "explain": "바닐라 크림 콜드 브루"
+    },
+    {
+      "id" : 4,
+      "image": "/images/mingi/제주 비자림 콜드 브루.jpg",
+      "explain": "제주 비자림 콜드 브루"
+    },
+    {
+      "id" : 5,
+      "image": "/images/mingi/토피넛 콜드 브루.jpg",
+      "explain": "토피넛 콜드 브루"
+    },
+    {
+      "id" : 6,
+      "image": "/images/mingi/나이트로 바닐라 크림.jpg",
+      "explain": "나이트로 바닐라 크림"
+    },
+    {
+      "id" : 7,
+      "image": "/images/mingi/나이트로 콜드 브루.jpg",
+      "explain": "나이트로 콜드 브루"
+    },
+    {
+      "id" : 8,
+      "image": "/images/mingi/벨벳 다크 모카 나이트로.jpg",
+      "explain": "벨벳 다크 모카 나이트로"
+    },
+    {
+      "id" : 9,
+      "image": "/images/mingi/콜드 브루 라떼.jpg",
+      "explain": "콜드 브루 라떼"
+    },
+    {
+      "id" : 10,
+      "image": "/images/mingi/콜드 브루 플로트.jpg",
+      "explain": "콜드 브루 플로트"
+    }
+  ],
+
+  "brewed":
+  [
+    {
+      "id" : 1,
+      "image": "/images/mingi/아메리카노.jpg",
+      "explain": "아메리카노"
+    },
+    {
+      "id" : 2,
+      "image": "/images/mingi/카페 라떼.jpg",
+      "explain": "카페 라떼"
+    }
+  ]
+}

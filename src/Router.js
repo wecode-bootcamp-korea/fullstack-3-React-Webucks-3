@@ -28,33 +28,33 @@ import ListYounguk from "./pages/Younguk/List/List";
 import DetailYounguk from "./pages/Younguk/Detail/Detail";
 
 function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<CommonPage />} />
-        {/* 하늘 */}
-        <Route path="/login-haneul" element={<LoginHaneul />} />
-        <Route path="/list-haneul" element={<ListHaneul />} />
-        <Route path="/detail-haneul" element={<DetailHaneul />} />
-        {/* 희윤 */}
-        <Route path="/login-heeyun" element={<LoginHeeyun />} />
-        <Route path="/list-heeyun" element={<ListHeeyun />} />
-        <Route path="/detail-heeyun" element={<DetailHeeyun />} />
-        {/* 종민 */}
-        <Route path="/login-jongmin" element={<LoginJongmin />} />
-        <Route path="/list-jongmin" element={<ListJongmin />} />
-        <Route path="/detail-jongmin" element={<DetailJongmin />} />
-        {/* 민기 */}
-        <Route path="/login-mingi" element={<LoginMingi />} />
-        <Route path="/list-mingi" element={<ListMingi />} />
-        <Route path="/detail-mingi" element={<DetailMingi />} />
-        {/* 영욱 */}
-        <Route path="/login-younguk" element={<LoginYounguk />} />
-        <Route path="/list-younguk" element={<ListYounguk />} />
-        <Route path="/detail-younguk" element={<DetailYounguk />} />
-      </Routes>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<CommonPage />} />
+				{/* 하늘 */}
+				<Route path="/login-haneul" element={<LoginHaneul />} />
+				<Route path="/list-haneul" element={<ListHaneul />} />
+				<Route path="/detail-haneul" element={<DetailHaneul />} />
+				{/* 희윤 */}
+				<Route path="/login-heeyun" element={<LoginHeeyun />} />
+				<Route path="/list-heeyun" element={<ListHeeyun />} />
+				<Route path="/detail-heeyun" element={<DetailHeeyun />} />
+				{/* 종민 */}
+				<Route path="/login-jongmin" element={<LoginJongmin />} />
+				<Route path="/list-jongmin" element={<ListJongmin />} />
+				<Route path="/detail-jongmin" element={<DetailJongmin />} />
+				{/* 민기 */}
+				<Route path="/login-mingi" element={<LoginMingi />} />
+				<Route path="/list-mingi" element={<ListMingi />} />
+				<Route path="/detail-mingi" element={<DetailMingi />} />
+				{/* 영욱 */}
+				<Route path="/login-younguk" element={<LoginYounguk />} />
+				<Route path="/list-younguk" element={<ListYounguk />} />
+				<Route path="/detail-younguk" element={<DetailYounguk />} />
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default Router;

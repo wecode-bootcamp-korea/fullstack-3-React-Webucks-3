@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family: "Montserrat Subrayada";
+	src: url("../../../../src/styles/Mingi/font/MontserratSubrayada-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat Subrayada";
+	src: url("../../../../src/styles/Mingi/font/MontserratSubrayada-Regular.ttf");
+}
+
+.login {
+	.body {
+		display: flex;
+		justify-content: center;
+		border-radius: 10px;
+		background-color: hsl(180deg 3% 94%);
+	}
+
+	.loginBox {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 450px;
+		margin: 80px auto;
+		border: 2px solid hsl(0deg 0% 87%);
+		background-color: white;
+
+		h1 {
+			margin-top: 80px;
+			font-family: "Montserrat Subrayada", sans-serif;
+			font-size: 40px;
+			font-weight: 700;
+		}
+
+		.formBox {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px 0 0;
+		}
+		.innerBox {
+			//border-color: #dedede;
+			border: 2px solid;
+			border-radius: 5px;
+			background-color: hsl(0deg 0% 97%);
+			width: 300px;
+			height: 40px;
+			margin: 10px 0;
+			padding: 0 10px;
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.typeChangeBtn {
+			position: absolute;
+			top: 82px;
+			right: 10px;
+			font-size: 11px;
+		}
+
+		.buttonBox {
+			margin: 10px;
+		}
+
+		#button {
+			border: 2px solid #61aded;
+			border-radius: 8px;
+			width: 300px;
+			height: 40px;
+			padding: 0 10px;
+			color: white;
+			background-color: #61aded;
+			font-size: 17px;
+		}
+
+		button:disabled {
+			opacity: 0.4;
+		}
+
+		.findPw {
+			margin: 120px 0 50px;
+		}
+
+		.findPw a {
+			color: hsl(200deg 40% 60%);
+			font-size: 15px;
+			font-weight: 500;
+			text-decoration: none;
+		}
+	}
+}
