@@ -1,17 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './List.scss';
-import { useState, useEffect } from 'react';
 import ImgList from '../../../components/imgList/ImgList'
 import TopNav from '/Users/heeyun/Desktop/wecode/fullstack-3-React-Webucks-3/src/components/Nav/TopNav';
-
 
 const List = () => {
     const [imgData, setImgData] = useState([]);
       
     useEffect(() => {
-        fetch('http://localhost:3000/data/imgData.json', {
-        method: 'GET' 
-        })              
+        fetch('http://localhost:3000/data/imgData.json')              
         .then(res => res.json())
         .then(data => {
             setImgData(data);
