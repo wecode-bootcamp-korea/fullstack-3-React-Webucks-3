@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+
+    body{
+        margin: 0px;
+
+        .container{
+            margin: 0px;
+            
+            header{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .cursiveWord{
+                    font-family: 'Dancing Script', cursive;
+                    font-weight: bold;
+                    font-size: 1.6em;
+                }
+
+                /* 커피 페이지 목록 */
+                .linkList{
+                    display: flex;
+                    list-style: none;
+                    padding-left:0px;
+
+                    > li{
+                        margin-left: 10px;
+                        color:#a8a8a6;
+                    }
+                }
+            }
+
+            .boxes{
+                display: flex;
+                margin: 20px;
+                justify-content: space-between;
+                width: auto;
+                align-items: center;
+                background-color: #F4F4F2;
+                padding: 5px 20px; 
+
+            }
+
+            #second-box{
+                display: block;
+                background-color: white;
+                margin: 0px;
+                
+                /* 커피 종류 이름 */
+                .title{
+                    font-size: 2em;
+                    margin-left:20px;
+                    font-weight: 600;
+                }
+                
+                /* 커피 페이지 위치 나열*/
+                .ul-box{
+                    height: 100%;
+                    margin-right: 20px;
+                    
+                    .small-linkList{
+                        display: flex;
+                        list-style: none;
+                        padding-left:0px;
+                        color:#a8a8a6;
+                        justify-content: flex-end;
+                        margin:0px;
+                        align-items: center;
+                        
+                        li{
+                            margin-left:10px;
+                            color:#a8a8a6;
+                            justify-content: flex-end;
+                        }
+                        i{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        section{
+            margin: 10px 20px 0px 20px;
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            column-gap: 5%;
+
+            /* 커피 사진 */
+            .coffee-image{
+                width: 100%;
+
+                > img{
+                    width:100%;
+                }
+            }
+
+            /* 커피 이름 */
+            .coffee-title{
+                padding-bottom: 10px;
+                border-bottom: 2px solid;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .small-title{
+                    margin-top: 0px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 0px;
+                }
+                .small-title-English{
+                    font-size :14px;
+                    font-weight: 500;
+                    color: #666;
+                }
+            }
+
+            /* 하트 아이콘 */
+            #heart{
+                cursor:pointer;
+                font-size: 40px;
+            }
+
+            /* 커피 설명 */
+            .coffee-description{
+                border-bottom: 1px solid #DFDFDF;
+                line-height: 1.6;
+            }
+
+            /* 제품 영양 정보 */
+            .coffee-nutrition{
+                display: flex;
+                justify-content: space-between;
+                padding:0px 20px;
+                border-bottom: 1px solid #DFDFDF;
+                font-size: 20px;
+            }
+
+            /* 제품 영양 상세 정보 */
+            .coffee-nutrition-detail{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0px 10px;
+
+                .coffee-nutrition-detail-in {
+                    #left{
+                        display: flex;
+                        list-style: none;
+                        padding-left:0px;
+                        border-right: 1px dashed #DFDFDF;
+                    }
+    
+                    > ul{
+                        padding-left: 0px;
+                        flex-direction: column;
+                        justify-content: space-between;
+    
+                        > li{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 5px 10px;
+                        }
+                    }
+                }
+            }
+
+            /* 알레르기 유발 요인 */
+            .allergy{
+                padding: 15px 20px;
+                background-color: #F4F4F2;
+                font-size:15px;
+                border-radius: 3px;
+                font-weight: 500;
+                color:rgb(54, 54, 54);
+                line-height: 1.6;
+                margin-bottom:40px;
+            }
+
+            /* 댓글 */
+            .review > h3{
+                padding-bottom: 5px;
+                border-bottom: 1px solid #DFDFDF;
+            }
+
+            .review-list > ul{
+                display: block;
+                list-style: none;
+                padding-left:0px;
+                line-height: 1.5;
+
+                a{
+                    font-weight: bold;
+                    color: black;
+                    text-decoration: none;
+                    margin-right: 7px;
+                }
+            }
+
+            /* 댓글 창 */
+            input{
+                width: 100%;
+                background-color: #F4F4F2;
+                border-radius:3px;
+                border:none;
+                padding: 15px 20px;
+                font-size: 15px;
+            }
+        }
+
+        footer{
+            margin-top: 100px;
+            padding: 20px 20px 0px 20px;
+            width: 100%;
+            background-color: #333333;
+            color: white;
+            text-decoration: none;
+            
+            .footer-boxes{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                
+                .footer-box > ul{
+                    list-style: none;
+                    padding-left:0px;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+
